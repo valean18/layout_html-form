@@ -11,7 +11,191 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+    method="post"
+    >
+      <fieldset class="form-group">
+        <legend>Personal information</legend>
+        <div class="form-field">
+          <label for="sur">Surname</label>
+          <input
+            id="sur"
+            type="text"
+            name="surname"
+            pattern="\w+"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="na">Name</label>
+          <input
+            id="na"
+            type="text"
+            name="namet"
+            pattern="\w+"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="hoay">How old are You?</label>
+          <input
+            id="hoay"
+            type="number"
+            name="HowOld"
+            value="12"
+            min="1"
+            max="100"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="fdob">Full date of birth</label>
+          <input
+            id="fdob"
+            type="date"
+            name="DateOfBirth"
+            placeholder="mm/dd/yyyy"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="ata">I accept the term of the agreement</label>
+          <input
+            id="ata"
+            type="checkbox"
+            name="terms"
+            required
+          >
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Registration</legend>
+        <div class="form-field">
+          <label for="em">E-mail</label>
+          <input
+            id="em"
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="pas">Password</label>
+          <input
+          id="pas"
+          type="password"
+          name="password"
+          minlength="6"
+          maxlength="20"
+          autocomplete="off"
+          required
+          >
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>An interesting fact about you!</legend>
+        <div class="form-field">
+          Do you love cats?
+          <label >
+            <input type="radio" name="love cats" value="yes"
+              required>
+              Yes
+          </label>
+          <label >
+            <input type="radio" name="love cats" value="no"
+              required>
+              No
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="wfc">What is your favorite color?</label>
+          <input
+            id="wfc"
+            type="color"
+            name="color"
+            value="#0000"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="gtb">What time do you go to bed?</label>
+          <input
+          id="gtb"
+          type="time"
+          required
+          >
+        </div>
+
+        <label for="fbc" class="form-field">
+          What are your favorite brand of cars?
+          <select
+          id="fbc"
+          name="brandcars"
+          required
+          multiple
+          >
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+          </select>
+        </label>
+
+        <div class="form-field">
+          <label for="ryw">How do you rate your work?</label>
+          <input
+            id="ryw"
+            type="range"
+            name="your work"
+            min="0"
+            max="10"
+            value="0"
+            step="1"
+            required
+          >
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Additional info</legend>
+        <label for="com" class="form-field">
+        Comments:
+          <textarea
+          id="com"
+          name="comments"
+          cols="25" rows="2"
+          required
+          autocomplete="off"
+          ></textarea>
+        </label>
+
+        <div class="form-field">
+          <label for="wru" >Would you recommend us?</label>
+          <select
+          id="wru"
+          name="recommend"
+          required
+          >
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <button>Submit</button>
+
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
